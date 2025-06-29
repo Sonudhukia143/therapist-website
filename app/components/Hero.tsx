@@ -21,8 +21,8 @@ export default function Hero() {
 
     return (
         <>
-            <div className={`${styles.backgroundImg} font-dark`}>
-                <p className="text-lg font-medium mb-2">Dr. Serena Blake's Counselling Services</p>
+            <div className={styles.backgroundImg}>
+                <p className="text-lg font-medium mb-2">Dr. Serena Blake&apos;s Counselling Services</p>
 
                 <h1 className="text-4xl font-extrabold mb-4">
                     Professional Counseling for Healing and Growth

@@ -21,4 +21,5 @@
   inset: 0;
   background-color: rgba(0, 0, 0, 0.3); /* Dims the bg */
   z-index: -1;
+  color: black;
 }

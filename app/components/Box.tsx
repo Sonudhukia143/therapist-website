@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface BoxProps {
     title: string;
     description: string;
@@ -11,7 +13,7 @@ export default function Box({ title, description, image, alt }: BoxProps) {
             <div className="flex flex-col gap-4 items-center content-center">
 
                 <span className="transition-transform hover:translate-x-2">
-                    <img src={image} alt={alt} className="mx-auto rounded-md" />
+                    <Image src={image} alt={alt} className="mx-auto rounded-md" ></Image>
                     <h1 className="text-xl font-bold text-gray-800 my-4">{title}</h1>
                     <p className="text-gray-800">{description}</p>
                 </span>

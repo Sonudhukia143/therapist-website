@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import { useState } from "react";
 
@@ -25,7 +24,7 @@ export default function Navbar() {
         {/* Desktop Links */}
         <ul className="hidden sm:flex gap-6 text-gray-700 font-medium">
           <li><Link href="/services">Services</Link></li>
-          <li><Link href="/about">About</Link></li>
+          <li><Link href="#about">About</Link></li>
           <li><Link href="/faq">Rates & FAQs</Link></li>
           <li><Link href="/locations">Areas Reserved</Link></li>
           <li><Link href="/contact">Contact</Link></li>
@@ -50,7 +49,7 @@ export default function Navbar() {
 
         {/* Menu Links */}
         <ul className="flex flex-col px-6 gap-4 text-gray-800 font-medium">
-          <li><Link href="/about" onClick={() => setIsOpen(false)}>About</Link></li>
+          <li><Link href="#about" onClick={() => setIsOpen(false)}>About</Link></li>
           <li><Link href="/services" onClick={() => setIsOpen(false)}>Services</Link></li>
           <li><Link href="/faq" onClick={() => setIsOpen(false)}>Rates & FAQs</Link></li>
           <li><Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
