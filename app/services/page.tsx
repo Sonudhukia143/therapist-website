@@ -28,7 +28,9 @@ export default function Services() {
                     />
                 </div>
             </div>
-            <Image className="absolute -bottom-65 right-0 scale-x-[-1] z-[1] hidden md:flex md:max-h-[250px] md:max-w-[175px] lg:max-h-[300px] lg:max-w-[200px] xl:max-w-[200px] xl:max-h-[300px] xl:right-[5%]" src="/serviceimages/plant.webp" alt="plantwebp"></Image>
+            <Image width={400}
+                height={400}
+                className="absolute -bottom-65 right-0 scale-x-[-1] z-[1] hidden md:flex md:max-h-[250px] md:max-w-[175px] lg:max-h-[300px] lg:max-w-[200px] xl:max-w-[200px] xl:max-h-[300px] xl:right-[5%]" src="/serviceimages/plant.webp" alt="plantwebp"></Image>
         </>
     );
 }

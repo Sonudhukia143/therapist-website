@@ -24,7 +24,7 @@ export default function Navbar() {
         {/* Desktop Links */}
         <ul className="hidden sm:flex gap-6 text-gray-700 font-medium">
           <li><Link href="/services">Services</Link></li>
-          <li><Link href="#about">About</Link></li>
+          <li><Link href="/#about">About</Link></li>
           <li><Link href="/faq">Rates & FAQs</Link></li>
           <li><Link href="/locations">Areas Reserved</Link></li>
           <li><Link href="/contact">Contact</Link></li>
