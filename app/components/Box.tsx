@@ -9,7 +9,7 @@ interface BoxProps {
 
 export default function Box({ title, description, image, alt }: BoxProps) {
     return (
-        <div className="bg-sky-200 mx-10 p-4 rounded-lg shadow-md border-1 border-black cursor-pointer z-[2]">
+        <div className="bg-sky-200 lg:mx-10 md:mx-10 xl:mx-10 p-4 sm:mx-0 rounded-lg shadow-md border-1 border-black cursor-pointer z-[2]">
             <div className="flex flex-col gap-4 items-center content-center">
 
                 <div className="transition-transform hover:translate-x-2">

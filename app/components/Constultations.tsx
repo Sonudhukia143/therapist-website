@@ -15,7 +15,7 @@ export default function Consultations() {
                         How I Help
                     </h1>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4 max-w-7xl mx-auto min-w-full my-6">
+                <div className="grid grid-cols-1 sm:px-0 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4 max-w-7xl mx-auto min-w-full my-6">
                     <Box
                         title="Anxiety & Stress Management"
                         description="Break free from the grip of stress and overwhelm. Through mindfulness and evidence-based strategies, discover a calm and centered version of yourself with us."
@@ -55,6 +55,8 @@ export default function Consultations() {
                 >
                     ⭐ <b>Start Healing</b>
                 </button>
+
+                
             </div>
         </>
     );
