@@ -16,6 +16,14 @@ const schema = z.object({
   }),
 });
 
+type ReCAPTCHAInstance = {
+  reset: () => void;
+  getValue: () => string | null;
+  getResponse: () => string;
+  execute: () => void;
+};
+
+
 type FormData = z.infer<typeof schema>;
 
 export default function ContactForm() {
@@ -27,7 +35,7 @@ export default function ContactForm() {
   } = useForm<FormData>({ resolver: zodResolver(schema) });
 
   const [captchaValue, setCaptchaValue] = useState<string | null>(null);
-  const recaptchaRef = useRef<any>(null);
+  const recaptchaRef = useRef<ReCAPTCHAInstance>(null);  //chanfw any and recat-google-recpactha any
 
   const onSubmit = (data: FormData) => {
     if (!captchaValue) {
@@ -130,7 +138,7 @@ export default function ContactForm() {
         <div className="w-full flex justify-start">
           <ReCAPTCHA
             sitekey="6LchnnErAAAAAFV-xKq9lJPDkOPnCtZrgQesprZX"
-            ref={recaptchaRef}
+            ref={recaptchaRef as unknown as React.Ref<Element>}
             onChange={(value: string | null) => setCaptchaValue(value)}
           />
         </div>
@@ -138,7 +146,7 @@ export default function ContactForm() {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full mt-6 bg-[#1f3b3a] hover:bg-[#254a48] text-white font-semibold py-3 px-6 rounded transition-all duration-300"
+          className="w-full mt-6 bg-[#1f3b3a] hover:bg-[#254a48] text-white font-semibold py-3 px-6 rounded transition-all duration-300 cursor-pointer"
         >
           Submit
         </button>

@@ -9,7 +9,7 @@ declare module "react-google-recaptcha" {
     theme?: "light" | "dark";
     size?: "compact" | "normal" | "invisible";
     tabindex?: number;
-    ref?: React.Ref<any>;
+    ref?: React.Ref<Element>;
   }
 
   const ReCAPTCHA: React.FC<ReCAPTCHAProps>;

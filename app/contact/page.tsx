@@ -19,7 +19,7 @@ export default function Contact() {
                         className="border-4 border-[#1f3b3a] rounded-full mb-6 shadow-md"
                     />
                     <h1 className="text-3xl md:text-4xl font-bold text-[#1f3b3a] mb-4">
-                        Hi, I'm Dr. Serena Blake
+                        Hi, I&apos;m Dr. Serena Blake
                     </h1>
                     <h2 className="text-2xl text-gray-700 font-bold mb-3">
                         PsyD & Clinical Psychologist
