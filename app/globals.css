@@ -9,7 +9,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem; /** it will make sure that the about just touches the tip */
   padding: 0%;
   margin: 0%;
 }
