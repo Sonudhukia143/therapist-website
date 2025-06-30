@@ -27,7 +27,7 @@ export default function TopBar() {
         </p>
         {/* ✨ Truncate long address only on small screens */}
         <p className="text-right overflow-hidden text-ellipsis whitespace-nowrap max-w-[150px] sm:max-w-full hover:underline cursor-pointer">
-          <Link href="/google-maps">
+          <Link href="/locations">
                     📍1287 Maplewood Drive, Los Angeles, CA
 
           </Link>

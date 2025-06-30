@@ -135,7 +135,7 @@ export default function ContactForm() {
         {errors.agreeToContact && <p className="text-red-600 text-sm">{errors.agreeToContact.message}</p>}
 
         {/* CAPTCHA */}
-        <div className="w-full flex justify-start">
+        <div className="w-full flex justify-start overflow-hidden">
           <ReCAPTCHA
             sitekey="6LchnnErAAAAAFV-xKq9lJPDkOPnCtZrgQesprZX"
             ref={recaptchaRef as unknown as React.Ref<Element>}
