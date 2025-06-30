@@ -67,56 +67,61 @@ export default function ContactForm() {
 
         {/* Name */}
         <div className="flex flex-col">
-          <label className="text-gray-700 font-semibold self-start">Name</label>
+          <label className="text-gray-700 font-semibold self-start" htmlFor="name">Name</label>
           <input
             {...register("name")}
             className="w-full mt-1 text-black px-4 py-2 border border-gray-300 rounded"
             placeholder="Your full name"
+            id="name"
           />
           {errors.name && <p className="text-red-600 text-sm mt-1">{errors.name.message}</p>}
         </div>
 
         {/* Email */}
         <div className="flex flex-col">
-          <label className="text-gray-700 font-semibold self-start">Email</label>
+          <label className="text-gray-700 font-semibold self-start" htmlFor="email">Email</label>
           <input
             {...register("email")}
             className="w-full mt-1 text-black px-4 py-2 border border-gray-300 rounded"
             placeholder="you@example.com"
+            id="email"
           />
           {errors.email && <p className="text-red-600 text-sm mt-1">{errors.email.message}</p>}
         </div>
 
         {/* Phone */}
         <div className="flex flex-col">
-          <label className="text-gray-700 font-semibold self-start">Phone</label>
+          <label className="text-gray-700 font-semibold self-start" htmlFor="phone">Phone</label>
           <input
             {...register("phone")}
             className="w-full mt-1 text-black px-4 py-2 border border-gray-300 rounded"
             placeholder="1234567890"
+            id="phone"
           />
           {errors.phone && <p className="text-red-600 text-sm mt-1">{errors.phone.message}</p>}
         </div>
 
         {/* What brings you here? */}
         <div className="flex flex-col">
-          <label className="text-gray-700 font-semibold self-start">What brings you here?</label>
+          <label className="text-gray-700 font-semibold self-start" htmlFor="reason">What brings you here?</label>
           <textarea
             {...register("reason")}
             rows={4}
             className="w-full mt-1 px-4 text-black py-2 border border-gray-300 rounded"
             placeholder="Tell us why you're reaching out"
+            id="reason"
           />
           {errors.reason && <p className="text-red-600 text-sm mt-1">{errors.reason.message}</p>}
         </div>
 
         {/* Preferred time to reach you */}
         <div className="flex flex-col">
-          <label className="text-gray-700 font-semibold self-start">Preferred time to reach you</label>
+          <label className="text-gray-700 font-semibold self-start" htmlFor="timing">Preferred time to reach you</label>
           <input
             {...register("preferredTime")}
             className="w-full mt-1 text-black px-4 py-2 border border-gray-300 rounded"
             placeholder="e.g., Weekdays after 5pm"
+            id="timing"
           />
           {errors.preferredTime && <p className="text-red-600 text-sm mt-1">{errors.preferredTime.message}</p>}
         </div>
@@ -124,24 +129,26 @@ export default function ContactForm() {
         {/* Agree to be contacted */}
         <div className="flex items-start gap-2">
           <input
+          id="agree"
             type="checkbox"
             {...register("agreeToContact")}
             className="mt-1 cursor-pointer"
           />
-          <label className="text-gray-700 text-sm">
+          <label className="text-gray-700 text-sm" htmlFor="agree">
             I agree to be contacted by Dr. Serena Blake.
           </label>
         </div>
         {errors.agreeToContact && <p className="text-red-600 text-sm">{errors.agreeToContact.message}</p>}
 
         {/* CAPTCHA */}
-        <div className="w-full flex justify-start overflow-hidden">
+        <div className="w-full flex justify-start overflow-hidden scale-90 sm:scale-100 origin-top-left">
           <ReCAPTCHA
             sitekey="6LchnnErAAAAAFV-xKq9lJPDkOPnCtZrgQesprZX"
             ref={recaptchaRef as unknown as React.Ref<Element>}
             onChange={(value: string | null) => setCaptchaValue(value)}
           />
         </div>
+
 
         {/* Submit Button */}
         <button

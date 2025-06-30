@@ -8,7 +8,7 @@ export default function Services() {
         <>
             <div className="bg-white p-10">
                 <div className="text-black p-2 flex gap-8">
-                    <Link className="cursor-pointer" href="/">Home</Link> &rarr; <p>Therapies</p>
+                    <Link aria-label="link to homepage" className="cursor-pointer" href="/">Home</Link> &rarr; <p>Therapies</p>
                 </div>
                 <div>
                     <h1 className={`${styles.size} font-bold p-2 text-gray-900 mx-auto`}>How I Help</h1>

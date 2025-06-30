@@ -14,7 +14,10 @@ export default function Details() {
                             <p className="text-2xl">1287 Maplewood Drive,</p>
                             <p className="text-2xl"> Los Angeles</p>
                             <p className="text-2xl">CA 90026</p>
-                            <Link href="/locations" className="bg-[#1E4145] opacity-999 text-[rgba(181,219,223,9)] inline-block p-2 rounded w-30">
+                            <Link
+                            aria-label="search the location of office"
+                            href="/locations" 
+                            className="bg-[#1E4145] opacity-999 text-[rgba(181,219,223,9)] inline-block p-2 rounded w-30">
                                 <p className="text-center">
                                     Google Maps
                                 </p>

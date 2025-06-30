@@ -29,6 +29,33 @@ export default function MapClient() {
   useEffect(() => {
     if (mapReady) {
       fetchMap(loc);
+
+      // 🔍 MutationObserver to patch anchor tags inside the map container
+      const mapContainer = document.getElementById('map');
+      if (!mapContainer) return;
+
+      // Immediately patch any existing <a> tags
+      mapContainer.querySelectorAll('a:not([href])').forEach(a => {
+        a.setAttribute('href', '#');
+      });
+
+      // Observe for dynamically added controls
+      const observer = new MutationObserver(mutations => {
+        mutations.forEach(({ addedNodes }) => {
+          addedNodes.forEach(node => {
+            if (node instanceof HTMLElement) {
+              node.querySelectorAll?.('a:not([href])').forEach(a => {
+                a.setAttribute('href', '#');
+              });
+            }
+          });
+        });
+      });
+
+      observer.observe(mapContainer, { childList: true, subtree: true });
+
+      // Cleanup
+      return () => observer.disconnect();
     }
   }, [mapReady, loc]);
 

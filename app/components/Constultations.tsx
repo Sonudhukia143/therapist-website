@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Box from "./Box";
+import Link from "next/link";
 
 export default function Consultations() {
     return (
@@ -30,7 +31,12 @@ export default function Consultations() {
                     />
                 </div>
             </div >
-            <Image width={400} height={400} className="absolute -bottom-287 right-0 scale-x-[-1] z-[1] hidden md:flex md:max-h-[250px] md:max-w-[175px] lg:max-h-[300px] lg:max-w-[200px] xl:max-w-[200px] xl:max-h-[300px] xl:right-[5%]" src="/serviceimages/plant.webp" alt="plantwebp"></Image>
+            <Image 
+            width={414}
+            height={552}
+            className="absolute -bottom-287 right-0 scale-x-[-1] z-[1] hidden md:flex md:max-h-[250px] md:max-w-[175px] lg:max-h-[300px] lg:max-w-[200px] xl:max-w-[200px] xl:max-h-[300px] xl:right-[5%]" 
+            src="/serviceimages/plant.webp" 
+            alt="plantwebp"></Image>
 
             <div
                 style={{ backgroundColor: "rgba(30, 65, 69, 0.9)" }}
@@ -49,15 +55,14 @@ export default function Consultations() {
                     Serena Blake is currently accepting new clients. <br />
                     Available for online and in-person sessions.
                 </p>
-                <button
+                <Link
                     style={{ color: "rgba(134, 199, 207, 0.9)", borderColor: "rgba(98, 174, 188, 0.9)" }}
-                    className="border border-solid rounded px-6 py-2 hover:bg-white transition cursor-pointer mx-auto"
-                >
+                    href="/contact"
+                    aria-label="link to contact page"
+                    className="border border-solid rounded px-6 py-2 items-center hover:bg-white transition cursor-pointer mx-auto flex">
                     ⭐ <b>Start Healing</b>
-                </button>
-
-                
-            </div>
+                </Link>
+            </div >
         </>
     );
 }

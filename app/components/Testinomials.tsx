@@ -81,12 +81,11 @@ export default function Testimonials() {
                     </div>
                 </div>
 
-                <button className="mt-10 bg-blue-600 hover:bg-blue-700 cursor-pointer text-white font-semibold py-3 px-6 rounded-full shadow-lg transition duration-300">
-                    <Link href="/contact">
-                                        Schedule Your First Session
-
+                <div className="mt-10 inline-block bg-blue-600 hover:bg-blue-700 cursor-pointer text-white font-semibold py-3 px-6 rounded-full shadow-lg transition duration-300">
+                    <Link aria-label="link to contact page" href="/contact">
+                        Schedule Your First Session
                     </Link>
-                </button>
+                </div>
             </div>
 
         </>

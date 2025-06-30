@@ -9,7 +9,7 @@ export default function Navbar() {
     <header className="shadow sticky top-0 z-50 bg-white border-2 shadow-lg p-2">
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         {/* Brand */}
-        <Link href="/" className="text-xl font-bold text-blue-700">
+        <Link href="/" aria-label="link to homepage" className="text-xl font-bold text-blue-700">
           Dr. Serena Blake
         </Link>
 
@@ -23,12 +23,12 @@ export default function Navbar() {
 
         {/* Desktop Links */}
         <ul className="hidden sm:flex gap-6 text-gray-700 font-medium">
-          <li><Link href="/services">Services</Link></li>
-          <li><Link href="/#about">About</Link></li>
-          <li><Link href="/#testimonials">Testimonials</Link></li>
-          <li><Link href="/#faqs">Rates & FAQs</Link></li>
-          <li><Link href="/locations">Areas Reserved</Link></li>
-          <li><Link href="/contact">Contact</Link></li>
+          <li><Link aria-label="link to services page" href="/services">Services</Link></li>
+          <li><Link aria-label="link to about section" href="/#about">About</Link></li>
+          <li><Link aria-label="link to testinomials section" href="/#testimonials" >Testimonials</Link></li>
+          <li><Link aria-label="link to faq section" href="/#faqs">Rates & FAQs</Link></li>
+          <li><Link aria-label="link to locations page"  href="/locations">Areas Reserved</Link></li>
+          <li><Link aria-label="link to contact page" href="/contact">Contact</Link></li>
 
         </ul>
       </nav>
@@ -50,12 +50,12 @@ export default function Navbar() {
 
         {/* Menu Links */}
         <ul className="flex flex-col px-6 gap-4 text-gray-800 font-medium">
-          <li><Link href="/#about" onClick={() => setIsOpen(false)}>About</Link></li>
-          <li><Link href="/#testimonials" onClick={() => setIsOpen(false)}>Testimonials</Link></li>
-          <li><Link href="/services" onClick={() => setIsOpen(false)}>Services</Link></li>
-          <li><Link href="/#faqs" onClick={() => setIsOpen(false)}>Rates & FAQs</Link></li>
-          <li><Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
-          <li><Link href="/locations">Areas Reserved</Link></li>
+          <li><Link aria-label="link to about section" href="/#about" onClick={() => setIsOpen(false)}>About</Link></li>
+          <li><Link aria-label="link to testinomials section" href="/#testimonials"  onClick={() => setIsOpen(false)}>Testimonials</Link></li>
+          <li><Link aria-label="link to services page" href="/services" onClick={() => setIsOpen(false)}>Services</Link></li>
+          <li><Link aria-label="link to faq section" href="/#faqs" onClick={() => setIsOpen(false)}>Rates & FAQs</Link></li>
+          <li><Link aria-label="link to contact page" href="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
+          <li><Link aria-label="link to locations page" href="/locations">Areas Reserved</Link></li>
         </ul>
       </div>
 
