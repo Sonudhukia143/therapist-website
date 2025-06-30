@@ -2,6 +2,7 @@
 import styles from "../styles/Hero.module.css";
 import { useState, useEffect } from "react";
 import StatsSection from "./StatsSection";
+import Link from "next/link";
 
 const rotatingTexts = [
     "🕊️ Greater Peace in Your Heart",
@@ -10,7 +11,6 @@ const rotatingTexts = [
 
 export default function Hero() {
     const [index, setIndex] = useState(0);
-
     useEffect(() => {
         const interval = setInterval(() => {
             setIndex((prev) => (prev + 1) % rotatingTexts.length);
@@ -49,17 +49,21 @@ export default function Hero() {
 
                 <div className="text-sm w-100% mx-auto p-4">
                     <ul className="flex flex-wrap list-disc gap-x-6 gap-y-2 mx-auto align-center justify-center">
-                        <span className="font-semibold">⭐ Top Rated</span>
-                        <li className="underline cursor-pointer">8 years practice, 500+ sessions</li>
-                        <li className="underline cursor-pointer">Testimonials</li>
-                        <li className="underline cursor-pointer">Media Mentions</li>
+                        <span className="font-bold">⭐ Top Rated</span>
+                        <li><Link  href="/#about" className="hover:underline font-semibold cursor-pointer">8 years practice, 500+ sessions</Link></li>
+                        <li><Link href="/#testimonials" className="hover:underline font-semibold cursor-pointer">Testimonials</Link></li>
+                        <li><Link href="/#media" className="hover:underline font-semibold cursor-pointer">Media Mentions</Link></li>
                     </ul>
                 </div>
 
                 <div className="mx-auto mt-4 p-2 text-center">
-                    <button className="bg-white text-black font-semibold py-3 px-6 rounded-full text-lg transition-all duration-300 shadow-md cursor-pointer hover:scale-105 hover:shadow-lg">
+                    <Link
+                        href="/contact"
+                        className="bg-white text-black font-semibold py-4 px-6 text-lg transition-all ease-in-out hover:font-bold duration-500 shadow-md hover:rounded-[20px] cursor-pointer hover:shadow-lg hover:text-yellow-900"
+                    >
                         ✨ Start Healing Today
-                    </button>
+                    </Link>
+
                 </div>
             </div>
             <StatsSection />

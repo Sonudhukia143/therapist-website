@@ -2,6 +2,7 @@
 
 import Slider from "react-slick";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Testimonials() {
     const testimonials = [
@@ -28,7 +29,7 @@ export default function Testimonials() {
     };
     return (
         <>
-            <div className="bg-gradient-to-b from-blue-50 to-white py-20 px-4 text-center" id="tetimonails">
+            <div className="bg-gradient-to-b from-blue-50 to-white py-20 px-4 text-center" id="testimonials">
                 <h2 className="text-4xl font-bold mb-8 text-gray-800">
                     What My Clients Say
                 </h2>
@@ -81,7 +82,10 @@ export default function Testimonials() {
                 </div>
 
                 <button className="mt-10 bg-blue-600 hover:bg-blue-700 cursor-pointer text-white font-semibold py-3 px-6 rounded-full shadow-lg transition duration-300">
-                    Schedule Your First Session
+                    <Link href="/contact">
+                                        Schedule Your First Session
+
+                    </Link>
                 </button>
             </div>
 

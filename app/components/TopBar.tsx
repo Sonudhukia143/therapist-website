@@ -21,7 +21,7 @@ export default function TopBar() {
     >
       <div className="max-w-6xl mx-auto flex justify-between items-center gap-4">
         <p className="font-medium whitespace-nowrap overflow-hidden text-ellipsis">
-          <a href="tel:+919518803143" className="hover:underline">
+          <a href="tel:+(323) 555-0192" className="hover:underline">
             📞 (323) 555-0192
           </a>
         </p>

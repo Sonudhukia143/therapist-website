@@ -43,7 +43,7 @@ export default function About() {
             committed to creating a safe, supportive space for you to thrive.
           </p>
 
-          <div className="flex flex-col md:flex-row gap-4 mt-4">
+          <div className="flex flex-col md:flex-row gap-4 mt-4" id="media">
             <div className="p-4 bg-white rounded shadow">
               <div className="p-6 bg-white rounded-xl shadow-md w-full">
                 <p className="font-bold text-lg text-[#1f3b3a] mb-2">🏆 Featured In</p>
