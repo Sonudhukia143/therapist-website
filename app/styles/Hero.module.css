@@ -19,7 +19,21 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.3); /* Dims the bg */
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: -1;
   color: black;
+}
+
+@keyframes shrinkBar {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0%;
+  }
+}
+
+.popUpBar {
+  animation: shrinkBar 20s linear forwards;
 }

@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import TopBar from "./components/TopBar";
 import Footer from "./components/Footer";
 import Script from "next/script";
+import PopUpBox from "./components/PopUpBox";
 
 // ✅ Google Fonts setup
 const geistSans = Geist({
@@ -58,6 +59,8 @@ export default function RootLayout({
       <body className="bg-white-900 text-gray-900">
         <div className="max-w-screen overflow-x-hidden w-full">
           <TopBar />
+              <PopUpBox />
+
           <Navbar />
           {children}
           <Footer />
