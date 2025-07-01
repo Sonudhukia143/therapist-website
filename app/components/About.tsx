@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import Lottie from "lottie-react";
 import animation from "../../public/animation/Animation - 1751182510674.json";
@@ -20,6 +19,7 @@ export default function About() {
             src="/favicon_io/android-chrome-512x512.png"
             alt="Dr. Serena Blake"
             className="rounded-lg border-8 border-white shadow-md"
+            loading="lazy"
           />
           <p className="font-medium text-gray-700">
             ⭐ <strong className="text-black">Top Rated</strong> |{" "}
@@ -55,6 +55,8 @@ export default function About() {
                     height={200}
                     alt="Tech Feature 1"
                     className="rounded-lg shadow hover:scale-105 transition-transform duration-300"
+                                loading="lazy"
+
                   />
                   <Image
                     src="/serviceimages/tech2.png"
@@ -62,6 +64,8 @@ export default function About() {
                     height={200}
                     alt="Tech Feature 2"
                     className="rounded-lg shadow hover:scale-105 transition-transform duration-300"
+                                loading="lazy"
+
                   />
                   <Image
                     src="/serviceimages/tech3.png"
@@ -69,6 +73,8 @@ export default function About() {
                     height={200}
                     alt="Tech Feature 3"
                     className="rounded-lg shadow hover:scale-105 transition-transform duration-300"
+                                loading="lazy"
+
                   />
                 </div>
               </div>

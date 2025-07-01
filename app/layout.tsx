@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     "Relationship Counseling",
     "Trauma Recovery",
     "Dr. Serena Blake",
+    "Clinical Psychologist in LA"
   ],
   authors: [{ name: "Dr. Serena Blake" }],
   creator: "Grow My Therapy",

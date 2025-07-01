@@ -17,6 +17,8 @@ export default function Contact() {
                         width={192}
                         height={192}
                         className="border-4 border-[#1f3b3a] rounded-full mb-6 shadow-md"
+                                    loading="lazy"
+
                     />
                     <h1 className="text-3xl md:text-4xl font-bold text-[#1f3b3a] mb-4">
                         Hi, I&apos;m Dr. Serena Blake

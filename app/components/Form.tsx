@@ -33,18 +33,26 @@ export default function ContactForm() {
     formState: { errors },
     reset,
   } = useForm<FormData>({ resolver: zodResolver(schema) });
+  const [successMessage, setSuccessMessage] = useState("");
 
   const [captchaValue, setCaptchaValue] = useState<string | null>(null);
   const recaptchaRef = useRef<ReCAPTCHAInstance>(null);  //chanfw any and recat-google-recpactha any
 
   const onSubmit = (data: FormData) => {
     if (!captchaValue) {
-      alert("Please verify you're not a robot.");
+      setSuccessMessage("Please verify you're not a robot.");
+      setTimeout(() => {
+        setSuccessMessage(""); // ✅ Step 2 (hide after 4s)
+      }, 4000);
       return;
     }
 
     console.log("Form Data:", data);
-    alert("Form submitted successfully!");
+    setSuccessMessage("Form submitted successfully! 🎉"); // ✅ Step 2
+
+    setTimeout(() => {
+      setSuccessMessage(""); // ✅ Step 2 (hide after 4s)
+    }, 4000);
 
     reset();
     recaptchaRef.current?.reset();
@@ -56,6 +64,16 @@ export default function ContactForm() {
       <h2 className="text-3xl font-bold mb-6 text-center text-[#1f3b3a]">
         📞 Contact Dr. Serena Blake
       </h2>
+
+      {/* ✅ Flash message */}
+{successMessage && (
+  <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-6 py-3 rounded shadow-lg z-[9999] animate-fadeInOut">
+    {successMessage}
+  </div>
+)}
+
+
+
       <p className="text-black mx-auto">
         Simply fill out the brief fields below and Serena will be in touch with you soon.
       </p>
@@ -129,7 +147,7 @@ export default function ContactForm() {
         {/* Agree to be contacted */}
         <div className="flex items-start gap-2">
           <input
-          id="agree"
+            id="agree"
             type="checkbox"
             {...register("agreeToContact")}
             className="mt-1 cursor-pointer"

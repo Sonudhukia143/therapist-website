@@ -7,9 +7,12 @@ export default function Services() {
     return (
         <>
             <div className="bg-white p-10">
-                <div className="text-black p-2 flex gap-8">
-                    <Link aria-label="link to homepage" className="cursor-pointer" href="/">Home</Link> &rarr; <p>Therapies</p>
-                </div>
+                <nav aria-label="link to homepage" className="text-black p-2 flex gap-8">
+                    <Link
+                        aria-label="link to homepage"
+                        className="cursor-pointer"
+                        href="/">Home</Link> &rarr; <p>Therapies</p>
+                </nav>
                 <div>
                     <h1 className={`${styles.size} font-bold p-2 text-gray-900 mx-auto`}>How I Help</h1>
                 </div>
@@ -28,7 +31,10 @@ export default function Services() {
                     />
                 </div>
             </div>
-            <Image width={400}
+            <Image
+                width={400}
+                loading="lazy"
+
                 height={400}
                 className="absolute -bottom-65 right-0 scale-x-[-1] z-[1] hidden md:flex md:max-h-[250px] md:max-w-[175px] lg:max-h-[300px] lg:max-w-[200px] xl:max-w-[200px] xl:max-h-[300px] xl:right-[5%]" src="/serviceimages/plant.webp" alt="plantwebp"></Image>
         </>

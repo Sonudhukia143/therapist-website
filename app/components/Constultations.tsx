@@ -31,12 +31,15 @@ export default function Consultations() {
                     />
                 </div>
             </div >
-            <Image 
-            width={414}
-            height={552}
-            className="absolute -bottom-287 right-0 scale-x-[-1] z-[1] hidden md:flex md:max-h-[250px] md:max-w-[175px] lg:max-h-[300px] lg:max-w-[200px] xl:max-w-[200px] xl:max-h-[300px] xl:right-[5%]" 
-            src="/serviceimages/plant.webp" 
-            alt="plantwebp"></Image>
+            <Image
+                width={414}
+                height={552}
+                className="absolute -bottom-287 right-0 scale-x-[-1] z-[1] hidden md:flex md:max-h-[250px] md:max-w-[175px] lg:max-h-[300px] lg:max-w-[200px] xl:max-w-[200px] xl:max-h-[300px] xl:right-[5%]"
+                src="/serviceimages/plant.webp"
+                alt="plantwebp"
+                loading="lazy"
+
+            ></Image>
 
             <div
                 style={{ backgroundColor: "rgba(30, 65, 69, 0.9)" }}

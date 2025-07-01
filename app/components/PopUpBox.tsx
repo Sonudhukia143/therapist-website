@@ -68,6 +68,8 @@ export default function PopUpBox() {
                                         src="/favicon_io/android-chrome-192x192.png"
                                         alt="Image of doctor"
                                         className="rounded-[8px]"
+                                                    loading="lazy"
+
                                     >
                                     </Image>
                                     <div className="font-[550] text-x text-[#1e4145]">⭐ Top Rated</div>
@@ -80,7 +82,10 @@ export default function PopUpBox() {
                                 </span>
 
                                 <p className="text-[#1e4145] mx-auto p-1 m-1"
-                                >Take the first step towards spiritual growth, deeper connections, and inner peace in Richmond, VA. Reach out to discuss how Christian counseling can support you.</p>
+                                >Take the first step towards spiritual growth,
+                                 deeper connections, and inner peace in Maplewood Dirve, LA. Reach out to discuss how Dr. Serena Blake 
+                                  can support you.
+                                </p>
 
                             </span>
 

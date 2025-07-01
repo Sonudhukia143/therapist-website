@@ -34,6 +34,8 @@ export default function Footer() {
             width={220}
             height={100}
             className="rounded-md shadow-lg hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+
           />
         </div>
 
