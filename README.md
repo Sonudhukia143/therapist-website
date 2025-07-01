@@ -1,3 +1,53 @@
+# 🧠 Therapist Website - Dr. Serena Blake, PsyD
+
+A responsive and accessible website built with **Next.js 14 (App Router)** and **Tailwind CSS** for an imaginary therapist, **Dr. Serena Blake**. This project was completed as part of the internship assignment for Grow My Therapy.
+
+## 🌐 Live Preview
+
+👉 [View Live Website](https://therapist-website-eta.vercel.app/)
+
+## 📂 Project Structure
+- **Hero Section** – Clean headline, subheadline, CTA button
+- **About Section** – Therapist bio, credentials, and animation
+- **Services Section** – Clear descriptions with relevant images
+- **FAQ Section** – Accordion-style common questions
+- **Contact Section** – Form with ReCAPTCHA, validations & success message
+- **Sticky Popup CTA** – Timed popup with animations and close logic
+
+## 🛠️ Tech Stack
+- ✅ **Next.js 14** – App Router
+- ✅ **Tailwind CSS** – For responsive styling
+- ✅ **TypeScript** – For type safety
+- ✅ **Zod + React Hook Form** – Form validation
+- ✅ **Google reCAPTCHA v2** – Bot protection
+- ✅ **Lottie** – Animation in About section
+- ✅ **Vercel** – Deployment
+
+## 📸 Screenshots
+![Hero Screenshot](public/screenshots/hero.png)
+![Services Screenshot](public/screenshots/services.png)
+![Contact Screenshot](public/screenshots/contact.png)
+
+## ✅ Features Implemented
+- Fully responsive layout (mobile + desktop)
+- Accessible navigation and form fields
+- Realistic copywriting & alt texts
+- Hover interactions & transitions
+- Reusable components with clean structure
+- Flash message on successful form submission
+- Page-level SEO and meta tags
+
+## 📥 How to Run Locally
+
+```bash
+git clone https://github.com/yourusername/therapist-website.git
+cd therapist-website
+npm install
+npm run dev
+
+
+// inbuild read me ignore it
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
