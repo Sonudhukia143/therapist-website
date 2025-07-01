@@ -15,7 +15,7 @@ export default function PopUpBox() {
 
         const hideTimeOut = setTimeout(() => {
             setIsVisible(false);
-        }, 20000);
+        }, 35000);
 
         return () => {
             clearTimeout(showTimeOut);
